@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L I M E - Assistente Virtual</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <style>
+    body {
+      background-color: #2b0b3a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .logo-topo-esquerda {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .logo-topo-esquerda svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #25d2da;
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 0.1rem;
+    }
+
+    .hero {
+  padding: 6rem 1rem;
+  background: linear-gradient(to right, #2b0b3a 60%, rgba(0, 0, 0, 0.4)), url('https://www.svgrepo.com/show/306500/mental-health-brain.svg') no-repeat center center;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+
+    .btn-primary {
+      background-color: #25d2da;
+      border: none;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #25d2da;
+      color: white;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .whatsapp-float img {
+      width: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .pricing-box {
+      background-color: #3c1557;
+      border-radius: 10px;
+      padding: 2rem;
+      color: white;
+    }
+
+    .pricing-box.featured {
+      border: 4px solid #ffc107;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .pricing-box.featured::before {
+      content: 'MAIS CONTRATADO';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffc107;
+      color: #3c1557;
+      font-size: 0.9rem;
+      font-weight: bold;
+      padding: 4px 12px;
+      border-radius: 30px;
+    }
+
+    .table thead {
+      background-color: #3c1557;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Logo no canto superior esquerdo -->
+<div class="logo-topo-esquerda">
+  <img src="logo_dashboard.png" alt="Logo LIME" style="height: 200px;">
+</div>
+
+<!-- Botão flutuante WhatsApp com estilo da LIME -->
+<a href="https://wa.me/5551981372495" class="whatsapp-float" target="_blank"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+          background-color: #25d2da; padding: 12px; border-radius: 50%;
+          box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+  <i class="bi bi-whatsapp" style="font-size: 28px; color: white;"></i>
+</a>
+
+<!-- Banner principal -->
+<header class="hero text-white text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Organização e leveza na sua rotina</h1>
+    <p class="lead">Assistência virtual com foco em profissionais da saúde e pequenos negócios.</p>
+    <a href="#planos" class="btn btn-outline-light btn-lg mt-3">Ver planos</a>
+  </div>
+</header>
+
+<section class="text-white" style="padding: 8rem 1rem 6rem 1rem;">
+  <div class="container-fluid">
+    <div class="row align-items-start"> <!-- alinhamento no topo -->
+      
+      <!-- Texto à esquerda -->
+      <div class="col-md-7 text-start ps-md-5">
+        <h2 class="fw-bold mb-4">A L I M E simplifica sua rotina<br><span style="color: #ffb600;">para você focar no que importa.</span></h2>
+        <p class="fs-5">Quem cuida de pessoas precisa de tempo, organização e leveza. A <strong>LIME</strong> é a solução ideal para profissionais da saúde mental que querem simplificar a rotina sem abrir mão da qualidade.</p>
+        <ul class="list-unstyled fs-5 mt-4">
+          <li><i class="bi bi-check-circle-fill text-info me-2"></i> Atendimento ao cliente</li>
+          <li><i class="bi bi-check-circle-fill text-info me-2"></i> Controle de agenda</li>
+          <li><i class="bi bi-check-circle-fill text-info me-2"></i> Emissão de notas fiscais</li>
+          <li><i class="bi bi-check-circle-fill text-info me-2"></i> Gestão de cobranças</li>
+          <li><i class="bi bi-check-circle-fill text-info me-2"></i> Organização de documentos</li>
+        </ul>
+        <p class="fs-5 mt-4 text-warning"><strong>Você cuida de pessoas.<br>A L I M E cuida da sua rotina.</strong></p>
+        <a href="https://wa.me/5551981372495" class="btn btn-warning btn-lg mt-4 fw-bold">Falar com a LIME agora</a>
+      </div>
+
+      <!-- Imagem à direita com altura controlada -->
+      <div class="col-md-5 text-center">
+        <img src="psicologa-lime.png" alt="Humanizado"
+             style="max-height: 500px; width: auto; border-radius: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
+        <p class="mt-4 fs-5 fw-bold">
+          <span style="color:#25d2da;">Tudo em um só lugar para você<br>simplificar a rotina,</span><br>
+          <span style="color:#ffc107;">ganhar tempo,</span><br>
+          <span style="color:white;">e viver com mais leveza.</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Pacotes -->
+  <section class="py-5 bg-light text-dark" id="planos">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">💼 Pacotes de Serviços</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="pricing-box text-center">
+            <h5>Pacote Básico<br>Organização Essencial</h5>
+            <h3 class="my-2 text-warning">R$ 480</h3>
+            <ul class="list-unstyled text-start ps-4">
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Atendimento até 3h/semanais;</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Controle de agenda e compromissos;*</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Lembretes por WhatsApp;**</li><br>
+<p style="font-size: 0.7rem;">
+  * 💡 É um apoio leve e organizacional, onde o<br>contratante ainda centraliza a comunicação e<br>confirmações.<br>
+  ** 💡 Envio de mensagens para lembrar o<br>contratante de compromissos ou vencimentos.
+</p>
+
+            </ul>
+            <a href="https://wa.me/5551981372495" class="btn btn-primary mt-4">Contratar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-box text-center featured">
+            <h5>Pacote Intermediário<br>Gestão Ativa da Rotina</h5>
+            <h3 class="my-2 text-warning">R$ 880</h3>
+            <ul class="list-unstyled text-start ps-4">
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Atendimento até 5h/semanais;</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Controle de agenda completo;</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Suporte básico ao controle financeiro;</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Organização de documentos;</li>
+            </ul>
+<div class="text-start my-3" style="font-size: 0.9rem;">
+      <p class="mb-1 fw-bold text-warning">🔖 Recomendação Especial</p>
+      <ul class="mb-2 ps-3 text-white list-unstyled">
+        <li><i class="bi bi-check2-circle text-info me-2"></i>Pensado para profissionais que desejam ganhar tempo sem abrir mão do controle;</li>
+        <li><i class="bi bi-check2-circle text-info me-2"></i>Precisam de um suporte confiável e constante;</li>
+        <li><i class="bi bi-check2-circle text-info me-2"></i>Preferem manter a gestão de cobranças sob controle próprio, mas com toda a base organizada;</li>
+      </ul>
+      <p class="mb-0 text-white"><em>Ideal para terapeutas, autônomos e pequenos negócios com rotina semanal em crescimento.</em></p>
+    </div>
+</ul>
+<a href="https://wa.me/5551981372495" class="btn btn-primary mt-4">Contratar</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-box text-center">
+            <h5>Pacote Completo<br>Delegação Total com NF</h5>
+            <h3 class="my-2 text-warning">R$ 1.580</h3>
+            <ul class="list-unstyled text-start ps-4">
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Atendimento até 10h/semanais;</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Controle completo da agenda;</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Envio de lembretes ao cliente;</li>
+              <li><i class="bi bi-check2-circle text-info me-2"></i>Organização de documentos;</li>
+<li><i class="bi bi-check2-circle text-info me-2"></i>Gestão completa de cobranças e lembretes;</li>
+<li><i class="bi bi-check2-circle text-info me-2"></i>Emissão de Nota Fiscal;</li>
+<li><i class="bi bi-check2-circle text-info me-2"></i>Sistema próprio automatizado;</li>
+
+
+            </ul>
+            <a href="https://wa.me/5551981372495" class="btn btn-primary mt-4">Contratar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Tabela Comparativa -->
+<section id="comparativo" class="py-5 bg-light text-dark">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" style="color: #3c1557;">📊 Tabela Comparativa dos Pacotes</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle" style="border-radius: 15px; overflow: hidden;">
+        <thead style="background-color: #3c1557; color: white;">
+          <tr>
+            <th class="text-start">Serviços Oferecidos</th>
+            <th>Plano Essencial 👩‍💻</th>
+            <th>Plano Intermediário ⭐</th>
+            <th>Plano Premium 🏆</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr><td class="text-start">Acompanhamento de Vencimentos</td><td>❌</td><td>✅</td><td>✅</td></tr>
+<tr><td class="text-start">Análise mensal de NF</td><td>❌</td><td>Opcional<br>(+R$120)</td><td>✅</td></tr>
+<tr><td class="text-start">Arquivos seguros (criptografia)</td><td>❌</td><td>❌</td><td>✅</td></tr>
+<tr><td class="text-start">Atendimento ao cliente</td><td>até 3h/sem</td><td>até 5h/sem</td><td>até 10h/sem</td></tr>
+<tr><td class="text-start">Emissão de NF</td><td>❌</td><td>Opcional<br>(+R$75)</td><td>✅</td></tr>
+<tr><td class="text-start">Envio de lembretes</td><td>✅<br>(básico)</td><td>✅</td><td>✅</td></tr>
+<tr><td class="text-start">Gestão de cobranças</td><td>❌</td><td>❌</td><td>✅</td></tr>
+<tr><td class="text-start">Marcações e Cancelamentos</td><td>❌</td><td>✅</td><td>✅</td></tr>
+<tr><td class="text-start">Organização de documentos</td><td>❌</td><td>✅</td><td>✅</td></tr>
+<tr><td class="text-start">Sistema próprio automatizado</td><td>❌</td><td>Opcional<br>(+R$98,90)</td><td>✅</td></tr>
+
+
+        </tbody>
+        <tfoot class="table-secondary">
+          <tr>
+            <td class="text-start fw-bold">⏳ Carga mensal<br>💵 Investimento</td>
+            <td>até 12h<br><strong>R$ 480</strong></td>
+            <td>até 20h<br><strong>R$ 880</strong></td>
+            <td>até 40h<br><strong>R$ 1.700</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Bônus com fundo branco, alinhada ao design dos planos -->
+<section class="py-5 bg-light text-dark">
+  <div class="container">
+    <div class="rounded shadow p-4 bg-white">
+      <h5 class="text-start mb-1">🎁 <strong>Bônus Exclusivos</strong></h5>
+      <p class="text-muted mb-4" style="font-size: 0.9rem;">(somente nos planos Básico e Intermediário)</p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle mb-0" style="border-radius: 0.5rem; overflow: hidden;">
+          <thead style="background-color: #6f42c1; color: #fff;">
+  <tr>
+    <th class="text-start">Bônus</th>
+    <th>Básico<br><small class="text-dark">(Organização Essencial)</small></th>
+    <th>Intermediário<br><small class="text-dark">(Gestão Ativa da Rotina)</small></th>
+  </tr>
+</thead>
+
+          <tbody>
+            <tr>
+              <td class="text-start">Modelos prontos de mensagens<br>para facilitar sua rotina</td>
+              <td>✅</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td class="text-start">Sugestão de rotina personalizada</td>
+              <td>✅</td>
+              <td>✅</td>
+            </tr>
+            <tr>
+              <td class="text-start">
+                Suporte emergencial por e-mail<br>
+                <small class="text-muted">(pontual)</small>
+              </td>
+              <td>✅</td>
+              <td>✅</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="text-center text-light" style="background-color: #1a1a1a; padding: 6rem 1rem;">
+    <div class="container">
+      <h2 class="fw-bold mb-5" style="font-size: 2rem;">💬 O que dizem nossos clientes</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-secondary rounded">
+            <p>"A Jéssica organizou minha rotina como<br>nunca antes. Hoje consigo focar no<br>que realmente importa."</p>
+            <small class="text-white-50">— Mariana R., Psicóloga</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-secondary rounded">
+            <p>"Simples, prático e eficaz.<br>Os lembretes salvaram minhas<br>relações com clientes!"</p>
+            <small class="text-white-50">— Bruno A., Terapeuta</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="bg-warning text-dark text-center">
+  <div class="container py-4">
+    <h2 class="fw-bold mb-3">Pronto para transformar seu consultório?</h2>
+    <p class="mb-4">Tenha mais tempo para cuidar de seus pacientes.<br>Deixe a organização com a gente!</p>
+ </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="py-4 text-center text-light" style="background-color: black;">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 L I M E - Assistente Virtual</p>
+    </div>
+  </footer>
+</body>
+</html>
